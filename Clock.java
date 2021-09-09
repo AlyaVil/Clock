@@ -63,7 +63,7 @@ class Clock extends Applet implements Runnable
                 Date date = cal.getTime();
                 timeString = formatter.format(date);
 
-// Now the thread checks to see if it should suspend itself
+
                 if (threadSuspended)
                 {
                     synchronized (this)
@@ -75,7 +75,7 @@ class Clock extends Applet implements Runnable
                     }
                 }
                 repaint();
-                t.sleep(1000); // interval specified in milliseconds
+                t.sleep(1000); 
             }
         }
         catch (Exception e)
